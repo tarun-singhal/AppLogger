@@ -23,4 +23,9 @@ locate "API Documentation" key.
         <a href="<?php echo $this->url('applog') ?>" class="btn btn-lg ag-welcome-btn-outline">API Log</a>
     <?php endif; ?>
 ```
+Step 4: If you are not using it in Apigility then you can call the Log view via:
+http://<domain-name>/applog
+
+I hope it will help you to monito the API Calls.
+
 
