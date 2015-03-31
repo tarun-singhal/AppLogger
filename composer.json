@@ -1,0 +1,29 @@
+{
+"name": "tarun-singhal/job-queue",
+"description": "Zend Server Feature JobQueue usage in Zend Framework 2.",
+"type": "library",
+"keywords": [
+"zf2",
+"Cron",
+"Job",
+"Job Queue",
+"JobQueue",
+"asynchronous",
+"Parallel Jobs"
+],
+"homepage": "https://github.com/tarun-singhal/JobQueue",
+"authors": [
+{
+"name": "Tarun Singhal",
+"email": "ks.tarun@gmail.com"
+}
+],
+"require": {
+"php": ">=5.3"
+},
+"autoload": {
+"classmap": [
+"./Module.php"
+]
+}
+}
