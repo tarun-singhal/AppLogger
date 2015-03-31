@@ -1,29 +1,27 @@
 {
-"name": "tarun-singhal/job-queue",
-"description": "Zend Server Feature JobQueue usage in Zend Framework 2.",
-"type": "library",
-"keywords": [
-"zf2",
-"Cron",
-"Job",
-"Job Queue",
-"JobQueue",
-"asynchronous",
-"Parallel Jobs"
-],
-"homepage": "https://github.com/tarun-singhal/JobQueue",
-"authors": [
-{
-"name": "Tarun Singhal",
-"email": "ks.tarun@gmail.com"
-}
-],
-"require": {
-"php": ">=5.3"
-},
-"autoload": {
-"classmap": [
-"./Module.php"
-]
-}
+   "name": "applogger",
+   "description": "API Logger or monitor in Zend Framework 2 and has ability to use in Apigility.",
+   "type": "library",
+   "keywords": [
+       "zf2",
+       "API",
+       "ApiGility",
+       "logger",
+       "api log"		
+   ],
+   "homepage": "https://github.com/tarun-singhal/AppLogger",
+   "authors": [
+       {
+           "name": "Tarun Singhal",
+           "email": "ks.tarun@gmail.com"
+       }
+   ],
+   "require": {
+       "php": ">=5.3"
+   },
+   "autoload": {
+       "classmap": [
+           "./Module.php"
+       ]
+   }
 }
