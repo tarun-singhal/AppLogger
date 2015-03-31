@@ -26,6 +26,6 @@ locate "API Documentation" key.
 Step 4: If you are not using it in Apigility then you can call the Log view via:
 http://<domain-name>/applog
 
-I hope it will help you to monito the API Calls.
+I hope it will help you to monitor the API Calls.
 
 
