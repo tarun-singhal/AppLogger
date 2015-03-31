@@ -1,5 +1,5 @@
 {
-   "name": "applogger",
+   "name": "tarun-singhal/applogger",
    "description": "API Logger or monitor in Zend Framework 2 and has ability to use in Apigility.",
    "type": "library",
    "keywords": [
