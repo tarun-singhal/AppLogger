@@ -39,6 +39,13 @@ class Module
         );
     }
 
+    /**
+     * todo 
+     * 1. log controller and action name - done
+     * 2. action profilling
+     * 
+     * @param MvcEvent $ev
+     */
     public function onBootstrap(MvcEvent $ev)
     {
         $sm = $ev->getApplication()->getServiceManager();
@@ -46,32 +53,14 @@ class Module
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
         $resp = $ev->getApplication()->getRequest();
-        
         $config = $sm->get('config');
-        
+
         // Handle Api-Log
         if ($config['log_flag']['api_log']) {
-            $eventManager->attach(MvcEvent::EVENT_ROUTE, function ($event) use($sm)
-            {
-                $resp = $event->getApplication()
-                    ->getRequest();
-                
-                $param = array(
-                    'method' => $resp->getMethod(),
-                    'uri' => $resp->getUriString(),
-                    'version' => $resp->getVersion()
-                );
-                
-                if ($resp->getMethod() == 'POST') {
-                    $param['input'] = json_encode($resp->getPost());
-                } else {
-                    $param['input'] = json_encode($resp->getQuery());
-                }
-                
-                
-                $objListener = $sm->get('captureLog');
-                $objListener->apiLog($param);
-            });
+            // get the api-log listener service
+            $apiLogListener = $ev->getApplication()->getServiceManager()->get('ApiLogListener');
+            // attach the listeners to the event manager
+            $ev->getApplication()->getEventManager()->attach($apiLogListener);
         } //End of Api-Log
         
         // Handle data exception log

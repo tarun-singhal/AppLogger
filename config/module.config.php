@@ -1,6 +1,5 @@
 <?php 
 return array(
-    
     'router' => array(
         'routes' => array(
             'applog' => array(
@@ -37,6 +36,12 @@ return array(
     'log_paths' => array(
         'api_log' => './log/api_log/',
         'exception_log' => './log/exception_log/',
+    ),
+    
+    'service_manager' => array(
+        'factories' => array(
+            'ApiLogListener' => 'AppLogger\Service\ApiLogListenerFactory',
+        ),
     ),
 );
 
